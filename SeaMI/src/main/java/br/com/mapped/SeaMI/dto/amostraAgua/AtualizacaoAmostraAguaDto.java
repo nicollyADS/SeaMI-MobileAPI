@@ -8,8 +8,7 @@ import jakarta.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 public record AtualizacaoAmostraAguaDto (
-        @NotNull(message = "A Data da coleta não pode ser nula")
-        @PastOrPresent(message = "A Data da coleta deve ser no passado ou presente")
+        @NotBlank(message = "A Data da coleta não pode ser nula")
         String dataColeta,
 
         @NotBlank(message = "O PH não pode estar em branco")
